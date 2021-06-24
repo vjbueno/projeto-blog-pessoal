@@ -1,0 +1,11 @@
+
+/* Configurações da img da tela de cadastro */
+#img-bg{
+    background-image: url("../../assets/img/fazendocadastro.jpg") ;
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover
+}   
