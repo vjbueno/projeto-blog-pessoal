@@ -1,0 +1,32 @@
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+/* configurações dos icones das redes sociais: */
+ul.social-network li{
+    display: inline; /* deixando os icones inline */
+    margin: 0; /* tirando a margin */
+    padding: 5px; /* espaçamento entre os icones*/
+}
+
+/* configurações do tamanho os icones das midias sociais */
+.fa{ 
+    font-size: 30pt; /*tamaho dos icones em geral; */
+    color: white; /* deixando os icones com a cor branco */
+    padding: 0px; /* espaçamento entre os icones*/
+}
+
+/* deixando o icone do facebook em azul quando o usuario passar o mouse utilizando o hover*/
+.fa-facebook-square:hover{
+    color: #3b5998 ;
+}
+
+/* deixando o icone do instagram em rosa quando o usuario passar o mouse utilizando o hover */
+.fa-instagram:hover{
+    color: #C13584;
+}
+
+/* deixando o icone do linkedin em azul quando o usuario passar o mouse utilizando o hover */
+.fa-linkedin-square:hover{
+    color: #0072b1;
+}
