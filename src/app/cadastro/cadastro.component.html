@@ -14,36 +14,51 @@
 
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input class="form-control" type="nome" name="nome" id="nome" placeholder="Informe seu nome completo"> 
+                        <input [(ngModel)]='user.nomeUsuario' class="form-control" type="nome" name="nome" id="nome" placeholder="Informe seu nome completo"> 
                     </div>
 
-                    <div class="form-group">
+                    <!-- DATA DE NASCIMENTO FEATURE
+                        <div class="form-group">
                         <label for="data">Data de nascimento</label>
                         <input class="form-control" type="date" name="data" id="data" placeholder="Informe seu nome completo"> 
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
-                    </div>
+                        <input [(ngModel)]='user.usuario'class="form-control" type="text" name="usuario" id="usuario" placeholder="Digite seu usuário">
 
+                        <div class="form-group">
+                            <label for="foto">Link da Foto</label>
+                            <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                          </div>
+                    </div>
+                    <!-- EMAIL FEATURE
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail"> 
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="confirmaSenha">Confirme a senha</label>
-                        <input class="form-control" type="password" name="senha" id="confirmaSenha" placeholder="Confirme sua senha">
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="senha" id="confirmaSenha" placeholder="Confirme sua senha">
                     </div>
 
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                          <option>Selecione um tipo de usuário:</option>
+                          <option value="normal">Normal</option>
+                          <option value="admin">Administrador</option>
+                        </select>
+                      </div>
+
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-success mr-4" >Confirmar cadastro</button>
+                        <button type="submit" class="btn btn-success mr-4"(click)='cadastrar()' >Confirmar cadastro</button>
                         <button type="submit" class="btn btn-danger mr-4" routerLink='/login' >Cancelar</button>
                     </div>
 
