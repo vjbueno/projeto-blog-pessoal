@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+/* Use este style de forma global */
+
+/* Deixa a rolagem da página descer de forma suave quando o usuário clica em algo */
+html
+{
+   scroll-behavior:smooth; 
+}

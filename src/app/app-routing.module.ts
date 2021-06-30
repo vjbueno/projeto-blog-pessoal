@@ -6,11 +6,11 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   
+    
   {path: "", redirectTo: "login", pathMatch: "full"},
   {path:"login", component: LoginComponent},
   {path:"cadastro", component: CadastroComponent},
 
-  /* ATENÇÃO: NECESSÁRIO CRIAR COMPONENTE PÁGINA DE INICIO PARA QUE ESTA ROTA FUNCIONE. não esqueça de importar a biblioteca*/
   {path: 'inicio', component: InicioComponent}
 
 ];

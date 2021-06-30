@@ -1,5 +1,12 @@
 
-<!-- <router-outlet></router-outlet> -->
+<!-- componete do menu: -->
+<app-menu *ngIf='auth.logado()'></app-menu>
+
+<!-- Rotas definidas no app-routing module  -->
+<router-outlet></router-outlet>
+
+<!-- Componente do inicio
+<app-inicio></app-inicio>  -->
 
 <!-- componente do cadastro
 <app-cadastro></app-cadastro>  -->
@@ -8,8 +15,5 @@
 <app-login></app-login> -->
 
 
-<!-- componete do menu:
-<app-menu></app-menu>  -->
-
 <!-- componete do rodapé --> 
-<app-rodape></app-rodape> 
+<app-rodape *ngIf='auth.logado()'></app-rodape> 
