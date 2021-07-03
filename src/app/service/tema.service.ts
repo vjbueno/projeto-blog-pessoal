@@ -16,14 +16,20 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   //método GET que busca todos os temas
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('http://localhost:8090/tema', this.token)
+    return this.http.get<Tema[]>('https://blogbuenovj.herokuapp.com/tema', this.token)
   }
 
   //método POST inclui um tema no objeto tema 
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('http://localhost:8090/tema', tema, this.token)
+    return this.http.post<Tema>('https://blogbuenovj.herokuapp.com/tema', tema, this.token)
 
   }
 

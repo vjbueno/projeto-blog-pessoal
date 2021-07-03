@@ -25,13 +25,25 @@ export class TemaComponent implements OnInit {
       alert("Sessão expirada, logue novamente") */
       this.router.navigate(['/login'])
     }
+
+    this.temaService.refreshToken()
+
+    //método tras todos os temas na página temas assim que o usuario foi redirecionado para ela
+    this.findAllTemas()
   }
 
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
       this.tema = resp
       alert('Tema cadastrado com sucesso!')
+      this.findAllTemas()
       this.tema = new Tema()
+    })
+  }
+
+  findAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[])=> {
+      this.listaTemas = resp
     })
   }
 
