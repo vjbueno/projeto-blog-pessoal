@@ -27,9 +27,23 @@ export class TemaService {
     return this.http.get<Tema[]>('https://blogbuenovj.herokuapp.com/tema', this.token)
   }
 
+  getByIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`https://blogbuenovj.herokuapp.com/tema/${id}`, this.token)
+  }
+
   //método POST inclui um tema no objeto tema 
   postTema(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('https://blogbuenovj.herokuapp.com/tema', tema, this.token)
+
+  }
+
+  //método PUT atualiza um tema no objeto tema
+  putTema(tema: Tema): Observable<Tema>{
+    return this.http.put<Tema>('https://blogbuenovj.herokuapp.com/tema', tema, this.token)
+  }
+
+  deleteTema(id: number) {
+    return this.http.delete(`https://blogbuenovj.herokuapp.com/tema/${id}`, this.token)
 
   }
 
