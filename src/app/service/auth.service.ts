@@ -17,14 +17,18 @@ export class AuthService {
 
   //método entrar
   entrar(userLogin: UserLogin): Observable<UserLogin> {
-    return this.http.post<UserLogin>("https://blogbuenovj.herokuapp.com/usuarios/logar", userLogin)
+    return this.http.post<UserLogin>("http://localhost:8090/usuarios/logar", userLogin)
 
   }
 
   //método cadastrar
   cadastrar(user: User): Observable<User> {
-    return this.http.post<User>("https://blogbuenovj.herokuapp.com/usuarios/cadastrar", user)
+    return this.http.post<User>("http://localhost:8090/usuarios/cadastrar", user)
 
+  }
+  
+  getByIdUser(idUsuario: number): Observable<User>{
+    return this.http.get<User>(`http://localhost:8090/usuarios/${idUsuario}`)
   }
 
   //método logado
