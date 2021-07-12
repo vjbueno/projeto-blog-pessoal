@@ -18,12 +18,12 @@ export class PostagemService {
 
   //método busca todas as postagens
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('http://localhost:8090/postagens/todospost', this.token)
+    return this.http.get<Postagem[]>('http://localhost:8090/postagens', this.token)
 
   }
 
   //método para publicar postagem
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('http://localhost:8090/postagens/incluipost', postagem, this.token)
+    return this.http.post<Postagem>('http://localhost:8090/postagens', postagem, this.token)
   }
 }
