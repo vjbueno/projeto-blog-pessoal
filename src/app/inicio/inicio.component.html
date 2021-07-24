@@ -59,10 +59,11 @@
                       <p class="card-text">
                           <small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                         </p>
-                        <p class="card-text">
+                         <!-- Corrigir bug: aplicação não está trazendo o nome do usuário que realizou o post. É algum conflito na var "nomeUsuario" -->
+                       <!--  <p class="card-text">
                             <small class="text-muted">Postado por:
                                 {{item.usuario.nomeUsuario}}</small>
-                          </p>
+                          </p> -->
 
                     </div>
                   </div>
@@ -83,6 +84,9 @@
                       <p class="card-text">
                           <small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                         </p>
+
+                        <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                        <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
                 
                     </div>
                   </div>
@@ -100,10 +104,11 @@
                       <p class="card-text">
                           <small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                         </p>
-                        <p class="card-text">
+                        <!-- Corrigir bug: aplicação não está trazendo o nome do usuário que realizou o post. É algum conflito na var "nomeUsuario" -->
+                        <!-- <p class="card-text">
                             <small class="text-muted">Postado por:
                                 {{item.usuario.nomeUsuario}}</small>
-                          </p>
+                          </p> -->
                     </div>
                   </div>
                 
