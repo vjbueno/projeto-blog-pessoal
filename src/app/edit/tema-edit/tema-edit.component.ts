@@ -20,6 +20,8 @@ export class TemaEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+    
     //se o token estiver vazio
     if (environment.token == ''){
       /*mostre este alert na página para o usuário. FEATURE
