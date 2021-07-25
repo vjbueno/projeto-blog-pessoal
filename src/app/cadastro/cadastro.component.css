@@ -3,7 +3,8 @@
 #img-bg{
     background-image: url("../../assets/img/fazendocadastro.jpg") ;
 
-    min-height: 695px;
+    min-height: 1000px;
+    max-width: 1000px;
 
     background-position: center;
     background-repeat: no-repeat;
